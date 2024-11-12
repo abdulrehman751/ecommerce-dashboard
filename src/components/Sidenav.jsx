@@ -83,27 +83,6 @@ const Sidenav = () => {
           ))}
         </Box>
       </Box>
-
-      <Box mt='6' mx='3' mb='6'>
-        <Link to='/support'>
-          <HStack
-            borderRadius='10px'
-            py='3'
-            px='4'
-            bg={isActiveLink("/support") ? "#F3F3F7" : "transparent"}
-            color={isActiveLink("/support") ? "#171717" : "#797E82"}
-            _hover={{
-              bg: "#F3F3F7",
-              color: "#171717",
-            }}
-          >
-            <Icon as={BiSupport} />
-            <Text fontSize='14px' fontWeight='medium'>
-              Support
-            </Text>
-          </HStack>
-        </Link>
-      </Box>
     </Stack>
   );
 };

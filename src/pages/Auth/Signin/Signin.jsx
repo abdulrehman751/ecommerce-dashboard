@@ -20,6 +20,7 @@ import { object, string } from "yup";
 import { Card } from "../../../components/Card";
 import { useMutation } from "react-query";
 import { signinUser } from "../../../api/query/userQuery";
+import DashboardLink from "../../../components/DashboardLink";
 
 const signinValidationSchema = object({
   email: string().email("Email is invalid").required("Email is required"),
@@ -46,9 +47,7 @@ const Signin = () => {
     <Container bg='white'>
       <Center minH='100vh'>
         <Card>
-          <Link to='/Dashboard'>
-            <Text fontSize='p3'>Go to Dashboard</Text>
-          </Link>
+          <DashboardLink />
           <Text fontWeight='medium' textStyle='h1'>
             Welcome to Crypto App
           </Text>

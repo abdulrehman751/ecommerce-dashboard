@@ -19,6 +19,7 @@ import { Card } from "../../../components/Card";
 import { signupUser } from "../../../api/query/userQuery";
 import { useMutation } from "react-query";
 import { useState } from "react";
+import DashboardLink from "../../../components/DashboardLink";
 
 const signupValidationSchema = object({
   name: string().required("Name is required"),
@@ -59,9 +60,7 @@ const Signup = () => {
     <Container>
       <Center minH='100vh'>
         <Card>
-          <Link to='/Dashboard'>
-            <Text fontSize='p3'>Go to Dashboard</Text>
-          </Link>
+          <DashboardLink />
           <Text fontWeight='medium' textStyle='h1'>
             Welcome to Crypto App
           </Text>
